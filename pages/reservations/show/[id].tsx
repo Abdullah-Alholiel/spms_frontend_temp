@@ -1,4 +1,4 @@
-import { ChakraUIEditInferencer } from "@refinedev/inferencer/chakra-ui";
+import { ChakraUIShowInferencer } from "@refinedev/inferencer/chakra-ui";
 import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
@@ -6,8 +6,8 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../../api/auth/[...nextauth]";
 
 
-export default function CategoryEdit() {
-    return <ChakraUIEditInferencer 
+export default function ReservationShow() {
+    return <ChakraUIShowInferencer
     />;
 }
 
@@ -31,7 +31,7 @@ export const getServerSideProps: GetServerSideProps<{}> = async (context) => {
                 ...translateProps,
             },
             redirect: {
-                destination: `/login?to=${encodeURIComponent("/categories")}`,
+                destination: `/login?to=${encodeURIComponent("/reservations")}`,
                 permanent: false,
             },
         };
