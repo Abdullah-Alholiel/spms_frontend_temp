@@ -123,6 +123,7 @@ export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
                                     canDelete: true,
                                 },
                             },
+                            {name: "dashboard", list: "/dashboard", meta: {canDelete: false} },
                             {
                                 name: "reservations",
                                 list: "/reservations",
